@@ -1,3 +1,4 @@
+//https://github.com/animahmed/assignment-3-javascript
 //Code 1: kilometertoMeter
 function kilometertoMeter(kilometer){
     var Meter;
@@ -36,7 +37,7 @@ function hotelCost(days){
         cost=10*100+(days-10)*80;
     }
     else if(days>20){
-        cost=10*100+10*80+(days-20)*50;//over 20 days,the cost is 50
+        cost=10*100+10*80+(days-20)*50; //over 20 days,the cost is 50
     }
     else{
         console.log("hotelCost cannot be negative")
