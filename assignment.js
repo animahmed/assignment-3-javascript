@@ -48,18 +48,22 @@ console.log(totalcost);
 
 //Code 4:megaFriend
 function megaFriend(friendsArray) {
-    var megaFriendName = '';
-    var megaFriendCharNum = 0;
+    var largestFriendName = '';
+    if (friendsArray.length == 0 || typeof (friendsArray) != 'object') {
+        console.log("Invalid Name");
+    }
+    else {
+        var largestFriendCharNum = 0;
         for (i = 0; i < friendsArray.length; i++) {
-            var friend = friendsArray[i];
-            var friendsCharCount = friend.length;
-            if (friendsCharCount > megaFriendCharNum) {
-                megaFriendCharNum = friendsCharCount;
-                megaFriendName = friend;
+            var char = friendsArray[i];
+            var friendsCharCount = char.length;
+            if (friendsCharCount > largestFriendCharNum) {
+                largestFriendCharNum = friendsCharCount;
+                largestFriendName = char;
             }
         }
     }
-    return megaFriendName;
+    return largestFriendName;
 }
-var friends = megaFriend(0);
-console.log(friends);
+var result= megaFriend(["Asif","Ria","Ashfaq","Sweet"]);
+console.log(result);
